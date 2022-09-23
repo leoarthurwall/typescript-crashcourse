@@ -1,0 +1,3 @@
+# Typescript Crashcourse
+
+Welcome to the typescript Crashcourse. The playground where I get to grips with typescript using vanilla JS. The idea is that once I've developed solid foundation TS skills, I'll apply it to my next react.js project. Watch this space...
