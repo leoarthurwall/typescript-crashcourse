@@ -119,7 +119,9 @@ employee = [
 ```
 ---
 
-## Unions
+## Unions & Enums
+
+### Unions
 
 a union is where a particular variable can hold more than one type
 
@@ -165,4 +167,33 @@ const user: User = {
     id:1,
     name: 'John'
 }
+```
+ ---
+
+## Type assestion
+Type assestions explicitly tell the compiler that we want to treat the entity as a different type
+
+e.g.
+```
+let cid: any = 1
+```
+Currently the cid variable has a type set to any, but we've given it a number
+
+We can now type assert in 2 ways. Like so:
+```
+let customerId = <number>cid
+```
+Alternatively:
+```
+let customerId = cid as number
+```
+
+Both type assertions will assign the customerId the type of number
+
+If you console.log(customerId), you'll get 1, as customerId has been assigned the value of cid:
+
+
+However, iof you try reassigning the type to customerId, you'll now get an **error**. e.g.:
+```
+customerId = 'true'
 ```
