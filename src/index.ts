@@ -38,3 +38,39 @@ console.log(employee)
 //Union - variable can hold more than one type
 let pid: string | number
 pid = '22'
+
+//Enum
+
+enum Direction1 {
+    Up = 1,
+    Down,
+    Left,
+    Right
+}
+console.log(Direction1.Up)
+//by default Up = 0
+//however you can addign Up a different number, e.g. 1
+
+console.log(Direction1.Right)
+//now right will have a value of 4 rather than the default 3
+
+enum Direction2 {
+    Up = 'Up',
+    Down = 'Down',
+    Left = 'Left',
+    Right = 'Right',
+}
+console.log(Direction2.Left)
+
+// OBJECTS  
+// you can set up the object as normal and then set up a seperate object type. then you can addign the type to the object. as follows
+
+type User = {
+    id: number
+    name: string
+}
+
+const user: User = {
+    id:1,
+    name: 'John'
+}

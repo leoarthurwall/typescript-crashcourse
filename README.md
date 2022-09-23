@@ -17,6 +17,7 @@ Welcome to the typescript Crashcourse. The playground where I get to grips with 
  - in the body add a <script src="index.js"></script>
  - NOTE: the browser doesn't read ts files so you need to add the index.js file to the script
 
+---
 
 ## compiling
 
@@ -33,6 +34,7 @@ Every time you want to compile your typescript file to JS you need to run the fo
 - MANUAL CHECK: run 'tsc index' (file name) in the terminal and you can see any errors within the file
 - AUTO CHECK:  run 'tsc --watch index' and errors will automatically be updated in terminal
 
+---
 
 ## initialising variables
 
@@ -63,6 +65,7 @@ any: can be assigned anything and will not throw an error
 let x: any = 'hello' 
 x = 8
 ```
+---
 
 ## Arrays
 
@@ -114,4 +117,52 @@ employee = [
     [3, 'dave'],
 ]
 ```
+---
 
+## Unions
+
+a union is where a particular variable can hold more than one type
+
+```
+let pid: string | number
+pid = '22'
+
+```
+### enumerated typed (enum)
+
+By default up will be assigned the value of 0 as it's  first in the obect. However you can reassign it's value. e.g. to 1. Now if you console.log(Direction1) it's value will be 1. 
+
+```
+enum Direction1 {
+    Up = 1,
+    Down,
+    Left,
+    Right
+}
+```
+Also, all the subsequent values will adjust correspondingly. So if you ran the following:
+
+```
+console.log(Direction1.Right)
+```
+Right would now be the value of 3 rather than the default value of 2.
+
+You can also assign the enum members other type values such as strings.
+
+---
+
+## Objects
+
+You can set up the object as normal and then set up a seperate object type. then you can addign the type to the object. as follows
+
+```
+type User = {
+    id: number
+    name: string
+}
+
+const user: User = {
+    id:1,
+    name: 'John'
+}
+```
