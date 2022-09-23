@@ -434,5 +434,47 @@ We can also run the following combinations for our extended class:
 console.log(emp.register())
 console.log(emp.position)
 console.log(emp.name)
-console.log(emp.id), 
+console.log(emp.id)
 ```
+
+## Generics
+used to build reusable components.
+
+We have a function that concatinates items of an array and puts them into a new array.
+
+```
+function getArray(items: any[]): any[] {
+    return new Array().concat(items)
+}
+
+let numArray = getArray([1,2,3,4])
+let strArray = getArray(['leo', 'dave', 'john'])
+
+numArray.push('hello')
+```
+
+This is okay, however it doesn't take into account that we might want a specific type for different arrays it produces.
+
+We can fix this...
+
+```
+function getArray<T>(items: T[]): T[] {
+    return new Array().concat(items)
+}
+
+let numArray = getArray<number>([1,2,3,4])
+let strArray = getArray<string>(['leo', 'dave', 'john'])
+```
+
+We add the placeholder <T> in angle brackets after the getArray function name and then change the property type from any to 'T'.
+
+Next we assign the type to the function callback, again in angle brackets.
+
+Now, when the function is called, the type needs to be matched to that particular function call.
+
+For instance, if we run:
+
+```
+numArray.push('hello')
+```
+It will flag an error because the numArray is assigned to the type <number>.
