@@ -82,3 +82,17 @@ let cid: any = 1
 let customerId = <number>cid
 // let customerId = cid as number
 console.log(customerId)
+
+//FUNCTIONS
+// you can give a type to both the parameters and the return value in a function
+
+function addNum(x: number, y: number): number {
+    return x + y;
+}
+console.log(addNum(1, 2))
+
+function log(message: string | number): void {
+    console.log(message)
+}
+
+log('hello')

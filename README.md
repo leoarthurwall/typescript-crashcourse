@@ -170,7 +170,7 @@ const user: User = {
 ```
  ---
 
-## Type assestion
+## Type Assertion
 Type assestions explicitly tell the compiler that we want to treat the entity as a different type
 
 e.g.
@@ -197,3 +197,30 @@ However, iof you try reassigning the type to customerId, you'll now get an **err
 ```
 customerId = 'true'
 ```
+
+## Functions
+you can give a type to both the parameters and the return value in a function.
+
+```
+function addNum(x: number, y: number): number {
+    return x + y;
+}
+```
+now if you run the following, you'll receive 3
+```
+console.log(addNum(1, 2))
+```
+
+## Functions without a return value
+You can also use ts for functions without a return value.  assign the type void to the return value.
+
+```
+function log(message: string | number): void {
+    console.log(message)
+}
+
+log('hello')
+```
+You can try logging a type which isn't a string or a number and you'll receive an error message.
+
+---

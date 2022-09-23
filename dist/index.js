@@ -60,3 +60,13 @@ let cid = 1;
 let customerId = cid;
 // let customerId = cid as number
 console.log(customerId);
+//FUNCTIONS
+// you can give a type to both the parameters and the return value in a function
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(1, 2));
+function log(message) {
+    console.log(message);
+}
+log('hello');
