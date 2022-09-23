@@ -111,3 +111,12 @@ console.log(Tom.id);
 console.log(Tom.name);
 // You will receive the following error message - Property 'name' is protected and only accessible within class 'Individual' and its subclasses.
 console.log(Tom.register());
+class Identity {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}

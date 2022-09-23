@@ -171,3 +171,24 @@ console.log(Tom.name)
 // You will receive the following error message - Property 'name' is protected and only accessible within class 'Individual' and its subclasses.
 
 console.log(Tom.register())
+
+//IMLEMENTING INTERFACE IN A CLASS
+
+interface IdentityInterface {
+    id: number
+    name: string
+    register(): string
+}
+
+class Identity implements IdentityInterface {
+     id: number
+     name: string
+
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+    register(){
+        return `${this.name} is now registered`
+    }
+}

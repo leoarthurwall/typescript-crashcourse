@@ -361,3 +361,35 @@ If we console.log the following:
 console.log(Tom.register())
 ```
 We will get recieve this message in the console: Tom Jones is now registered
+
+## Implementing interface to a class
+you can implement an interface to a class with ease.
+
+Here's the interface. Notice how we have applied a type to the register method too.
+```
+interface IdentityInterface {
+    id: number
+    name: string
+    register(): string
+}
+```
+
+Here's the class. The syntax is as follows: class 'className' implements 'interfaceName'
+
+That's all there is too it.
+
+Now, in this case the register method needs to return a string otherwise an error will flag.
+```
+class Identity implements IdentityInterface {
+     id: number
+     name: string
+
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+    register(){
+        return `${this.name} is now registered`
+    }
+}
+```
