@@ -199,6 +199,8 @@ customerId = 'true'
 ```
 
 ## Functions
+
+### Functions with a return value
 you can give a type to both the parameters and the return value in a function.
 
 ```
@@ -211,7 +213,7 @@ now if you run the following, you'll receive 3
 console.log(addNum(1, 2))
 ```
 
-## Functions without a return value
+### Functions without a return value
 You can also use ts for functions without a return value.  assign the type void to the return value.
 
 ```
