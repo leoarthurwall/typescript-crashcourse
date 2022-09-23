@@ -228,11 +228,12 @@ You can try logging a type which isn't a string or a number and you'll receive a
 ---
 
 ## Interfaces
-An interface is simular to a custom type - it's usually used to give types to objects.
 
 ### Object Interface
 
-An interface is called 'interface' rather than type'
+An interface is simular to a custom type - it's usually used to give types to objects.
+
+An interface is called 'interface' rather than 'type'
 
 - The ? after age means that the age property is optional, and if age isn't used in the object, no error will flag.
 - Also the readonly property prefix before surname means that the property cannot be reassigned a value
