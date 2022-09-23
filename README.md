@@ -302,3 +302,61 @@ const Leo = new Person(1, 'Leo Wall')
 const Dave = new Person(2, 'Dave Brown')
 console.log(Leo, Dave)
 ```
+
+## Data Modifiers
+aka (access modifiers)
+
+The class properties are public by default. They can be changed to private or protected.
+
+**Private** - the property will only be accessible within the class.
+**Protected** - the property will only be accessible within the class, and its subclasses.
+
+```
+class Individual {
+    private id: number
+    protected name: string
+
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+}
+
+const Tom = new Individual(1, 'Tom Jones')
+const Joe = new Individual(2, 'Joe Brown')
+```
+So here we have a class, similar to the one created above. Notice how id is 'private' and name is 'protected'
+
+Now if we run:
+```
+console.log(Tom.id)
+```
+You will receive the following error message - Property 'id' is private and only accessible within class 'Individual'.
+And if we run
+```
+console.log(Tom.name)
+```
+You will receive the following error message - Property 'name' is protected and only accessible within class 'Individual' and its subclasses.
+
+### Register( ) mathod
+There are more methods that can be used within a class. Constructor is one, Another is the Register method.
+
+```
+class Individual {
+     id: number
+     name: string
+
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+    register(){
+        return `${this.name} is now registered`
+    }
+}
+```
+If we comsole.log the following:
+```
+console.log(Tom.register())
+```
+We will get recieve this message in the console: Tom Jones is now registered
