@@ -16,14 +16,14 @@ age = 30
 
 let ids: number[] = [1, 2 ,3 , 4, 5]
 ids.push(8)
-ids.push('eight')
+// ids.push('eight')
 console.log(ids)
 
 let arr: any[] = [1, true, 'hello']
 
 // tuple - can set the type. Must be in the predifined order however
 let person: [number, string, boolean] = [1, 'brad', true]
-let people: [number, string, boolean] = [2, 'brad', 'dave']
+// let people: [number, string, boolean] = [2, 'brad', 'dave']
 
 // tuple array - you can specify the varible type and order of an array of arrays
 let employee: [number, string][]
@@ -96,3 +96,31 @@ function log(message: string | number): void {
 }
 
 log('hello')
+
+//INTERFACES
+// similar to a custom type - usually used with objects
+
+interface UserInterface {
+    id: number
+    name: string
+    age?: number
+    readonly surname: string
+}
+
+const user1: UserInterface = {
+    id:1,
+    name: 'John',
+    surname: 'doe'
+}
+
+// can also be used with functions
+
+interface MathFunc {
+    (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y
+console.log(add(1, 2))
+
+const subtract: MathFunc = (x: number, y: number): number => x - y
+console.log(subtract(1, 2))

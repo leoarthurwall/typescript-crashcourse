@@ -12,12 +12,12 @@ age = 30;
 //ARRAYS
 let ids = [1, 2, 3, 4, 5];
 ids.push(8);
-ids.push('eight');
+// ids.push('eight')
 console.log(ids);
 let arr = [1, true, 'hello'];
 // tuple - can set the type. Must be in the predifined order however
 let person = [1, 'brad', true];
-let people = [2, 'brad', 'dave'];
+// let people: [number, string, boolean] = [2, 'brad', 'dave']
 // tuple array - you can specify the varible type and order of an array of arrays
 let employee;
 employee = [
@@ -70,3 +70,12 @@ function log(message) {
     console.log(message);
 }
 log('hello');
+const user1 = {
+    id: 1,
+    name: 'John',
+    surname: 'doe'
+};
+const add = (x, y) => x + y;
+console.log(add(1, 2));
+const subtract = (x, y) => x - y;
+console.log(subtract(1, 2));
