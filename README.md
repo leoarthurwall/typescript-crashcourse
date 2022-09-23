@@ -304,11 +304,12 @@ console.log(Leo, Dave)
 ```
 
 ## Data Modifiers
-aka (access modifiers)
+**aka (access modifiers)**
 
 The class properties are public by default. They can be changed to private or protected.
 
 **Private** - the property will only be accessible within the class.
+
 **Protected** - the property will only be accessible within the class, and its subclasses.
 
 ```
@@ -338,8 +339,8 @@ console.log(Tom.name)
 ```
 You will receive the following error message - Property 'name' is protected and only accessible within class 'Individual' and its subclasses.
 
-### Register( ) mathod
-There are more methods that can be used within a class. Constructor is one, Another is the Register method.
+### Register( ) method
+There are more methods that can be used within a class. Constructor is one, another is the Register method.
 
 ```
 class Individual {
@@ -355,7 +356,7 @@ class Individual {
     }
 }
 ```
-If we comsole.log the following:
+If we console.log the following:
 ```
 console.log(Tom.register())
 ```
