@@ -17,10 +17,19 @@ Welcome to the typescript Crashcourse. The playground where I get to grips with 
  - in the body add a <script src="index.js"></script>
  - NOTE: the browser doesn't read ts files so you need to add the index.js file to the script
 
-  ## error checking
+
+## compiling
+
+Every time you want to compile your typescript file to JS you need to run the following in the terminal:
+
+- SINGLE COMPILE: tsc
+- AUTO COMPILE: tsc --watch
+
+## error checking
 
   You can check errors using typescript in the code, as any errors will be highlighted.
 
   Also, you can check for erros in the terminal:
 - MANUAL CHECK: run 'tsc index' (file name) in the terminal and you can see any errors within the file
 - AUTO CHECK:  run 'tsc --watch index' and errors will automatically be updated in terminal
+
