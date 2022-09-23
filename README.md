@@ -6,27 +6,23 @@ Welcome to the typescript Crashcourse. The playground where I get to grips with 
 
 ### index.ts
 
-- Create an index.ts file in the root directory
+Create an index.ts file in the root directory
 
 ### TS config
 
-- Setup tsc config file:
-
-In the terminal:
+To setup tsc config file, in the terminal write:
 
 ```
 tsc --init
 ```
 
-In the tsconfig.json file you've just created
-
-- set target to:
+In the tsconfig.json file you've just created, set target to:
 
 ```
 "target": "ES6",
 ```
 
-- uncomment and set the outDir to:
+Also, uncomment and set the outDir to:
 
 ```
 "outDir": "./dist"
