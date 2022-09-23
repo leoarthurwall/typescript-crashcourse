@@ -393,3 +393,46 @@ class Identity implements IdentityInterface {
     }
 }
 ```
+
+## Extending a class
+
+maybe we want to create an employee class that uses the properties of id & name, and maybe we want to add a position property too.
+
+As we already have an identy class. We can use the properties set there and add to it by making a sub class:
+
+To add a sub class to a class use the following syntax: class 'subClassName' extends 'className'.
+
+We create a constructor to initialise the properties of the new subClass. 
+
+As the id and name properties are already initialised in the Identity class, we don't need to reinitialise them in the sub class. Instead we use the 'super( )' method, and add the pre-initialised properties inside.
+
+We initialise the new position property as normal. 
+
+T
+```
+class Employee extends Identity {
+    position: string
+
+    constructor(id: number, name: string, position: string) {
+        super(id, name)
+        this.position = position
+    }
+}
+```
+We create a new variable for employee below the subClass
+```
+const emp = new Employee(3, "Shawn", "Developer")
+console.log(emp)
+```
+The console.log(emp) will display the following: in the console:
+```
+Employee {id: 3, name: 'Shawn', position: 'Developer'}
+```
+We can also run the following combinations for our extended class: 
+
+```
+console.log(emp.register())
+console.log(emp.position)
+console.log(emp.name)
+console.log(emp.id), 
+```

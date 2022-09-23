@@ -120,3 +120,13 @@ class Identity {
         return `${this.name} is now registered`;
     }
 }
+//EXTEND A CLASS
+//maybe we want to create an employee class that uses the properties of id, name and register, and maybe we want to add a position propert too.
+class Employee extends Identity {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Shawn", "Developer");
+console.log(emp.position);
