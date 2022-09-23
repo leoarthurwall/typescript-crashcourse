@@ -79,3 +79,14 @@ const add = (x, y) => x + y;
 console.log(add(1, 2));
 const subtract = (x, y) => x - y;
 console.log(subtract(1, 2));
+// CLASSES
+//classes are used to create objects
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+const Leo = new Person(1, 'Leo Wall');
+const Dave = new Person(2, 'Dave Brown');
+console.log(Leo, Dave);

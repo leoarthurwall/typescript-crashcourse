@@ -272,6 +272,33 @@ const subtract: MathFunc = (x: number, y: number): number => x - y
 console.log(subtract(1, 2))
 ```
 
+## Classes
 
+Classes are used to create objects. So we can create multiple objects using a class.
 
+```
+class Person {
+    id: number
+    name: string
 
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+}
+```
+A constructor is a method ahat is basically a function that runs within the class.
+
+A constructor will run whenever an object is instantiated from that class
+
+NOTE: this.id refers to the id of the function it's written within.
+
+To create a new person, we can instantiate the object and run the constructor outside of the class. 
+
+NOTE: to create a new Person object, the keyword 'new' needs to be placed before the class name.
+
+```
+const Leo = new Person(1, 'Leo Wall')
+const Dave = new Person(2, 'Dave Brown')
+console.log(Leo, Dave)
+```

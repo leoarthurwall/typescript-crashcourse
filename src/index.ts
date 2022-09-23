@@ -124,3 +124,21 @@ console.log(add(1, 2))
 
 const subtract: MathFunc = (x: number, y: number): number => x - y
 console.log(subtract(1, 2))
+
+
+// CLASSES
+//classes are used to create objects
+
+class Person {
+    id: number
+    name: string
+
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+}
+
+const Leo = new Person(1, 'Leo Wall')
+const Dave = new Person(2, 'Dave Brown')
+console.log(Leo, Dave)
